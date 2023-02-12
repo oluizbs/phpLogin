@@ -1,12 +1,44 @@
-<?php
-    $login_cookie = $_COOKIE['login'];
-    if(isset($login_cookie)){
-        echo"Bem Vindo, $login_cookie<br>";
-        echo"As informações <font color='red'>PODEM</font> ser acessadas.";
-    }
-    else{
-        echo"Bem vindo, condidado <br>";
-        echo"As informações <font color='red'>NÃO PODEM</font> ser acessadas.";
-        echo"<br><a href='login.html'>Faça Login</a> Para ler o conteúdo";
-    }
+<?php 
+  
+  session_start();
+
+  require_once('methods/verification.php');
+
+  verifica('pages/login.page.php');
+
 ?>
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Painel Privado</title>
+  </head>
+  <body>
+
+
+    <div class="card">
+
+        <div class="card-img">
+            <img width="150px" src="img/mario_login.png" alt="">
+        </div>
+
+        <div class="card-body">
+            <h4>- PAINEL PRIVADO</h4>
+
+            <p>Olá, Nome do Usuário</p>
+
+            <a href="methods/logout.php">
+                <button class="btn">Sair</button>
+            </a>
+        </div>
+    </div>
+  
+  </body>
+</html>
