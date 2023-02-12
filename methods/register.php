@@ -9,6 +9,8 @@
     $sql = "INSERT INTO users(nome, email, password) VALUES (:nome, :email,:password)";
 
     $stmt = $conn->prepare($sql);
+    
+    // ( ͡~ ͜ʖ ͡°)
 
     $params = array(
         ':nome' => $nome, 
@@ -19,9 +21,9 @@
     $stmt->execute($params);
 
     echo "<script>
-          alert('Funcionário cadastrado com sucesso.');
+          alert('Conta cadastrado com sucesso!');
       </script>
-      <meta http-equiv='refresh' content='0, url=funcionarios.php'>
+      <meta http-equiv='refresh' content='0, url=../pages/login.page.php'>
     ";
 
 
