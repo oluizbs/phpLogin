@@ -1,0 +1,41 @@
+ if (isset($entrar)){
+
+        $verifica = $pdo->query("SELECT * FROM users WHERE email =: $email AND pass =: $pass") or die("erro ao selecionar");
+        $resultado = $conn->prepare($verifica);
+
+        if (mysqli_num_rows($verifica)<=0){
+            echo"<script language='javascript' type='text/javascript'>
+            alert('Login e/ou senha incorretos');window.location
+            .href='../index.php';</script>";
+            header("Location:../");
+            die();
+
+        }else{
+            setcookie("email",$email);
+            echo "<script> alert('Usuário não encontrado');</script>
+            <meta http-equiv='refresh' content='0, url=../pages/login.page.php";
+          }};
+
+
+
+
+
+//     $sql = "SELECT * FROM `users` WHERE `$mail` = '$mail' AND `$password`= '$password'";
+//     $sql = "SELECT * FROM users WHERE email=:email AND password =:password";
+//     $sql = "SELECT `email`, `password` FROM `users` WHERE (`email` = `$email`) AND (`password` =: `$password`)";
+
+//     $resultado->execute([`email` => `$email`, `password` => `$password`]);
+//     $rows = $resultado->fetch();
+
+    // if(!empty($users)) {
+    //     session_start();
+    //     $_SESSION['id'] = $users['id'];
+    //     $_SESSION['name'] = $users['name'];
+    //     $_SESSION['email'] = $users['email'];
+    //     header('location:../');
+    // }else{
+    //     echo "<script> alert('Usuário não encontrado!');</script>
+    //   <meta http-equiv='refresh' content='0, url=../pages/login.page.php'>
+    // ";
+          
+// }

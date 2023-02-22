@@ -5,9 +5,10 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(227, 227, 227);
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+
 }
 
 .card::before{
@@ -16,7 +17,8 @@ body {
     top: 25px;
     bottom: 25px;
     left: -10px;
-    background-color: #ff587c;
+    background: rgb(110,0,177);
+    background: linear-gradient(90deg, rgba(110,0,177,1) 0%, rgba(36,0,168,1) 100%); 
     padding: 5px;
     border-radius:30px 0px 0 30px;
 }
@@ -26,7 +28,8 @@ body {
     top: 25px;
     bottom: 25px;
     right: -10px;
-    background-color: #ff587c;
+    background: rgb(110,0,177);
+    background: linear-gradient(90deg, rgba(110,0,177,1) 0%, rgba(36,0,168,1) 100%); 
     padding: 5px;
     border-radius:0px 30px 30px 0px;
 }
@@ -45,20 +48,27 @@ body {
 }
 /* .card:hover .card-img{
     top: -80px;
-    transform: scale(1.1);
+    margin: 0 auto;   
+    transform: scale(0.5);
 } */
 
 .card-img{
     transition: all 1s;
     position: absolute;
-    top: +140px;
-    right: +8px;
+    top: -90px;
+    right: -35px;
     z-index: +99;
+    transform: scale(0.6);
+    filter: invert(100%) sepia(100%) saturate(9530%) hue-rotate(620deg) brightness(75%) contrast(100%);
+}
+
+.card:hover .card-img{ 
+    transform: scale(0.7);
 }
 
 .card-footer{
     text-align: center;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 .input-form{
@@ -68,31 +78,43 @@ body {
     width: 400px;
     border: 1px solid #212529bb;
     border-radius: 30px;
+    margin: 0 auto;
 }
 
 .btn{
     margin-bottom: 20px;
-    background-color: #ff587c;  
     color: white;
-    width: 100%;
+    width: 65%;
+    margin-left: 18%;
     border: 0;
     padding: 10px;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 15px;
+    background: rgb(114,34,193);
+    background: linear-gradient(90deg, rgba(114,34,193,1) 0%, rgba(58,0,250,1) 100%);  
+    transition: all 1s;
+    cursor: pointer;
 }
 .btn:hover{
-    background-color: #e7486a;
+    background: rgb(114,34,193);
+    background: linear-gradient(90deg, rgb(133, 49, 217) 0%, rgb(48, 0, 205) 100%);
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 20px;
 }
 
 h4{
     text-align: center;
-    margin: 0 auto;
     margin-bottom: 5%;
-    color: #ff587c;
+    color: rgb(130, 0, 210);
+    /* background: rgb(110,0,177);
+    background: linear-gradient(90deg, rgba(110,0,177,1) 0%, rgba(36,0,168,1) 100%);  */
     font-size: 18px;
 }
 
 .link_acess{
     text-decoration: none;
-    color: #ff587c;
+    color: rgb(136, 63, 210);
 }
+
+/* Keyframes examples https://blog.hubspot.com/website/css-animation-examples */

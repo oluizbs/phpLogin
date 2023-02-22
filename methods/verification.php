@@ -1,6 +1,6 @@
 <?php
 
-    function verifica($path){
+    function verification($path){
         if(!$_SESSION['id']){
             header('location:'.$path);
             exit;

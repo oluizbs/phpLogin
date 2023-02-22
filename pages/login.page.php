@@ -1,10 +1,14 @@
+<?php
+  include_once('../methods/conn.php');
+  
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6681/6681204.png">
     <!-- css -->
     <link rel="stylesheet" href="../css/style.css">
 
@@ -15,22 +19,22 @@
     <div class="card">
 
       <div class="card-img">
-        <!-- <img width="150px" src="../img/mario_login.png" alt=""> -->
+        <img width="150px" src="#" alt="">
       </div>
 
       <div class="card-body">
-        <h4>- LOGIN</h4>
-        <form action="../methods/login.php" method="post">
-            <input class="input-form" type="email" name="email" placeholder="Email">
-            <input class="input-form" type="password" name="password" placeholder="Senha">
+        <h4>LOGIN</h4>
+        <form action="../methods/login.php" method="POST">
+            <input class="input-form" type="email" name="email" placeholder="Email"><br>
+            <input class="input-form" type="password" name="pass" placeholder="Password"><br>
 
-            <button class="btn" type="submit">Entrar</button>
+            <button class="btn" type="submit">Sign in</button>
         </form>
       </div>
 
       <div class="card-footer">
-        <small>Ainda não possui uma conta?</small>
-        <a href="register.page.php">Criar nova conta</a>
+        <small>Don't have an account yet?</small>
+        <a href="register.page.php">Create new account</a>
       </div>
     </div>
 

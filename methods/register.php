@@ -1,30 +1,28 @@
 <?php
     require_once("conn.php");
-
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    //echo "$nome_usuario - $email_usuario";
     
-    $sql = "INSERT INTO users(nome, email, password) VALUES (:nome, :email,:password)";
+    $user_name = $_POST['user_name'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    //echo "$nome_usuario - $email_usuario";
+
+    $sql = "INSERT INTO users(user_name, email, pass) VALUES (:user_name, :email,:pass)";
 
     $stmt = $conn->prepare($sql);
     
-    // ( ͡~ ͜ʖ ͡°)
 
     $params = array(
-        ':nome' => $nome, 
+        ':user_name' => $user_name, 
         ':email' => $email, 
-        ':password' => $password,
+        ':pass' => $pass
     );
 
     $stmt->execute($params);
 
     echo "<script>
-          alert('Conta cadastrado com sucesso!');
-      </script>
-      <meta http-equiv='refresh' content='0, url=../pages/login.page.php'>
-    ";
+          alert('Cadastrado realizado com sucesso! Realize agora o login');
+          <meta http-equiv='refresh' content='0, url=../pages/login.page.php'>
+      </script>";
 
 
 
@@ -32,14 +30,14 @@
     
     // if(mysql_affected_rows($conn) != 0){
     //             echo "
-    //                 <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/aula/cadastro.php'>
+    //                 <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=#'>
     //                 <script type='text/javascript'>
     //                     alert('Usuario cadastrado com Sucesso.');
     //                 </script>
     //             ";    
     //         }else{
     //             echo "
-    //                 <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=http://localhost/aula/cadastro.php'>
+    //                 <META HTTP-EQUIV=REFRESH CONTENT = '0;URL=#'>
     //                 <script type='text/javascript'>
     //                     alert('O Usuario não foi cadastrado com Sucesso.');
     //                 </script>
@@ -47,4 +45,4 @@
     //         }
 ?>
 
- 
+<!-- // ( ͡~ ͜ʖ ͡°) -->

@@ -2,9 +2,9 @@
   
   session_start();
 
-  require_once('methods/verification.php');
+  require_once('../methods/verification.php');
 
-  verifica('pages/login.page.php');
+  verification('../pages/login.page.php');
 
 ?>
 
@@ -26,7 +26,7 @@
     <div class="card">
 
         <div class="card-img">
-            <img width="150px" src="img/mario_login.png" alt="">
+            <img width="150px" src="#" alt="">
         </div>
 
         <div class="card-body">
